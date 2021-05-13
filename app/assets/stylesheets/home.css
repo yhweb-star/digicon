@@ -1,0 +1,47 @@
+.header{
+  background-color: aquamarine;
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-top{
+  height: 100vh - 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-bottom{
+  height: 100vh - 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-button{
+  width: 100%;
+  color: black;
+  border: 2px solid black;
+  padding: 30px 50px;
+  margin: 40px 20px 20px;
+  text-align: center;
+}
+
+.notice{
+  background-color: white;
+}
+
+.contact{
+  background-color: lightpink;
+}
+
+.schedule{
+  background-color: lightgoldenrodyellow;
+}
+
+.absence{
+  background-color: lightgray;
+}
