@@ -1,0 +1,51 @@
+<h2>新規登録</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :facility,"お子様が通う施設名" %><br />
+    <%= f.collection_select(:facility, School.all, :facility, :facility, {}, autofocus: true) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :grade, "学年" %>  ※半角<br />
+    <%= f.text_field :grade %>年
+  </div>
+
+  <div class="field">
+    氏名<br />
+    <%= f.text_field :last_name, placeholder:"例) 山田" %>
+    <%= f.text_field :first_name, placeholder:" 太郎" %>
+  </div>
+
+  <div class="field">
+    シメイ<br />
+    <%= f.text_field :last_name_kana, placeholder:"例) ヤマダ" %>
+    <%= f.text_field :first_name_kana, placeholder:" タロウ" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone, "電話番号" %>  ※半角・ハイフンなし<br />
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "メールアドレス" %>  ※半角<br />
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "パスワード" %>  ※半角英数混合6文字以上<br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "パスワード（再）" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "アカウント登録" %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<h2>新規登録（施設用）</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "schools/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :facility,"施設名" %><br />
+    <%= f.text_field :facility, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ceo, "責任者" %> (フルネーム)<br />
+    <%= f.text_field :ceo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone, "電話番号" %>  ※半角・ハイフンなし<br />
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "メールアドレス" %>  ※半角<br />
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "パスワード" %>  ※半角英数混合6文字以上<br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "パスワード（再）" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "アカウント登録" %>
+  </div>
+<% end %>
