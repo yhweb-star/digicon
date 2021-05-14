@@ -45,3 +45,13 @@
 .absence{
   background-color: lightgray;
 }
+
+
+
+.left-message{
+  text-align: left;
+}
+
+.right-message{
+  text-align: right;
+}

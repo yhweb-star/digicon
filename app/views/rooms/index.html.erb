@@ -1,0 +1,39 @@
+<% if user_signed_in? %>
+  <div class='contact-title'><h3>お子様が通う施設へのご連絡</h3></div>
+  <br>
+  <% @schools.each do |school| %>
+    <% if school.facility == current_user.facility %>
+      <%= school.facility %>
+      <% if @school_ids.include?(school.id) %>
+        <br>
+        <%= link_to "チャットへ", room_path(current_user.rooms.find_by(school_id: school.id)) %><br>
+      <% else %>
+        <%= form_for Room.new do |f| %>
+          <%= f.hidden_field :school_id, :value => school.id %>
+          <%= f.submit "チャットルームを作成"%>
+        <% end %>
+      <% end %>
+    <% else %>
+    <% end %>
+  <% end %>
+<% elsif school_signed_in? %>
+  <div class='contact-title'><h3>ご家庭との連絡</h3></div>
+  <br>
+  <% @users.each do |user| %>
+    <% if user.facility == current_school.facility %>
+      <%= user.grade %>年 <%= user.last_name %> <%= user.first_name %>
+      <% if @user_ids.include?(user.id) %>
+        <br>
+        <%= link_to "チャットへ", room_path(current_school.rooms.find_by(user_id: user.id)) %><br>
+      <% else %>
+        <%= form_for Room.new do |f| %>
+          <%= f.hidden_field :user_id, :value => user.id %>
+          <%= f.submit "チャットルームを作成"%>
+        <% end %>
+      <% end %>
+    <% else %>
+    <% end %>
+  <% end %>
+<% else %>
+  <h3>関係者以外の方はご利用いただけません。</h3>
+<% end %>

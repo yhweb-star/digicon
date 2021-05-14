@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_13_045245) do
+ActiveRecord::Schema.define(version: 2021_05_13_063309) do
+
+  create_table "messages", charset: "utf8", force: :cascade do |t|
+    t.string "text"
+    t.boolean "is_user"
+    t.bigint "room_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["room_id"], name: "index_messages_on_room_id"
+  end
+
+  create_table "rooms", charset: "utf8", force: :cascade do |t|
+    t.bigint "school_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["school_id"], name: "index_rooms_on_school_id"
+    t.index ["user_id"], name: "index_rooms_on_user_id"
+  end
 
   create_table "schools", charset: "utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -47,4 +65,7 @@ ActiveRecord::Schema.define(version: 2021_05_13_045245) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "messages", "rooms"
+  add_foreign_key "rooms", "schools"
+  add_foreign_key "rooms", "users"
 end
