@@ -5,7 +5,7 @@
   </div>
   <div class="menu-bottom">
     <div class='menu-button schedule'><%= link_to '学校行事', events_path%></div>
-    <div class='menu-button absence'><%= link_to '欠席・遅刻・早退のご連絡', '#' %></div>
+    <div class='menu-button absence'><%= link_to '欠席・遅刻・早退のご連絡', absences_path %></div>
   </div>
 <% elsif user_signed_in? %>
   <div class="menu-top">
@@ -14,7 +14,7 @@
   </div>
   <div class="menu-bottom">
     <div class='menu-button schedule'><%= link_to '学校行事', events_path %></div>
-    <div class='menu-button absence'><%= link_to '欠席・遅刻・早退のご連絡', '#' %></div>
+    <div class='menu-button absence'><%= link_to '欠席・遅刻・早退のご連絡', new_absence_path %></div>
   </div>
 <% else %>
   <h3>関係者以外の方はご利用いただけません。</h3>

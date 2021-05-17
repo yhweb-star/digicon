@@ -1,0 +1,17 @@
+<div class='contact-title'><h3>欠席・遅刻・早退の連絡があった方</h3></div>
+
+<% if user_signed_in? %>
+  <%= link_to "連絡する", new_absence_path, class:"post" %>
+<% end %>
+
+<% @absences.each do |absence| %>
+  <div class="absence-list">
+    <%= absence.user.last_name %>
+    <%= absence.user.first_name %>
+    <%= absence.user.grade %>年<br>
+    <%= absence.date_when.year %>年<%= absence.date_when.month %>月<%= absence.date_when.day %>日
+    <%= absence.time_when.hour %>時<%= absence.time_when.min %>分<br>
+    <%= absence.reason.name %>
+    <%= absence.status %>
+  </div>
+<% end %>

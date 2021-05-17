@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   end
   resources :events
   resources :contacts
+  resources :absences
 
 end
