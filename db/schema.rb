@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_13_063309) do
+ActiveRecord::Schema.define(version: 2021_05_17_052841) do
+
+  create_table "events", charset: "utf8", force: :cascade do |t|
+    t.string "subject", null: false
+    t.datetime "start_time", null: false
+    t.datetime "ending_time", null: false
+    t.string "place", null: false
+    t.string "details", null: false
+    t.bigint "school_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["school_id"], name: "index_events_on_school_id"
+  end
 
   create_table "messages", charset: "utf8", force: :cascade do |t|
     t.string "text"
@@ -65,6 +77,7 @@ ActiveRecord::Schema.define(version: 2021_05_13_063309) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "schools"
   add_foreign_key "messages", "rooms"
   add_foreign_key "rooms", "schools"
   add_foreign_key "rooms", "users"

@@ -1,0 +1,36 @@
+<div class='contact-title'><h3>行事・イベントを登録</h3></div>
+
+<%= form_with(model: @event, local: true) do |form| %>
+
+  <div class="title">
+    <%= form.label :subject,"件名" %>
+    <%= form.text_field :subject %>
+  </div>
+
+  <div class="time">
+    <%= form.label :start_time,"開始日時" %>
+    <%= form.datetime_select :start_time %>
+  </div>
+
+  <div class="time">
+    <%= form.label :ending_time,"終了日時" %>
+    <%= form.datetime_select :ending_time %>
+  </div>
+
+  <div class="content">
+    <%= form.label :place,"場所" %>
+    <%= form.text_field :place %>
+  </div>
+
+  <div class="content">
+    <%= form.label :details,"詳細" %>
+    <%= form.text_field :details %>
+  </div>
+
+  <div class="submit">
+    <%= form.submit "予定を追加" %>
+  </div>
+
+<% end %>
+
+<div class='bottan-list bottan-index'><%= link_to '連絡内容一覧に戻る', events_path %></div>

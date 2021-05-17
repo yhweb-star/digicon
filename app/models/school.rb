@@ -5,6 +5,7 @@ class School < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :rooms
+  has_many :events
 
   with_options presence: true do
     validates :facility

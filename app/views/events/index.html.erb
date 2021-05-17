@@ -1,0 +1,14 @@
+<% if school_signed_in? %>
+  <div class='new-addition'><%= link_to 'イベントを追加', new_event_path %></div>
+<% end %>
+
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+  <% events.each do |event| %>
+    <div>
+      <%= link_to event_path(event.id) do %>
+        <%= event.subject %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>

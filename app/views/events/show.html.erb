@@ -1,0 +1,17 @@
+<div class='contact-title'><p><%= "#{@event.start_time.year}年#{@event.start_time.month}月#{@event.start_time.day}日の予定" %></p></div>
+
+<div class='contact-index'>
+<div class='contact-subject'><p>件名: <%= @event.subject %></p></div>
+<div class='contact-at'><p>開始時間: <%= @event.start_time %></p></div>
+<div class='contact-at'><p>終了時間: <%= @event.ending_time %></p></div>
+<div class='contact-contents'><p>場所: <%= @event.place %></p></div>
+<div class='contact-contents'><p>詳細: <%= @event.details %></p></div>
+</div>
+
+<div class='bottan-menu'>
+  <div class='bottan-list bottan-index'><%= link_to '学校行事一覧に戻る', events_path %></div>
+  <% if school_signed_in? %>
+    <div class='bottan-list bottan-edit'><%= link_to 'イベントを編集', edit_event_path(@event.id), method: :get %></div>
+    <div class='bottan-list bottan-destroy'><%= link_to 'イベントを削除', event_path(@event.id), method: :delete %></div>
+  <% end %>
+</div>
