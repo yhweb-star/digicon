@@ -1,0 +1,12 @@
+<% if school_signed_in? %>
+  <div class='new-addition'><%= link_to '連絡追加', new_contact_path %></div>
+<% end %>
+
+<% @contacts.each do |contact| %>
+  <div class='contacts'>
+  <%= link_to contact_path(contact.id) do %>
+    <div class='contact-date'><%= contact.created_at %></div>
+    <div class='contact-subjevt'><%= contact.subject %></div>
+  <% end %>
+  </div>
+<% end %>

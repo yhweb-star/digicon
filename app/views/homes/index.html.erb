@@ -1,6 +1,6 @@
 <% if school_signed_in? %>
   <div class="menu-top">
-    <div class='menu-button notice'><%= link_to '学校からのお知らせ', '#' %></div>
+    <div class='menu-button notice'><%= link_to '学校からのお知らせ', contacts_path %></div>
     <div class='menu-button contact'><%= link_to 'ご家庭への連絡', rooms_path %></div>
   </div>
   <div class="menu-bottom">
@@ -9,7 +9,7 @@
   </div>
 <% elsif user_signed_in? %>
   <div class="menu-top">
-    <div class='menu-button notice'><%= link_to '学校からのお知らせ', '#' %></div>
+    <div class='menu-button notice'><%= link_to '学校からのお知らせ', contacts_path %></div>
     <div class='menu-button contact'><%= link_to '学校へのご連絡', rooms_path %></div>
   </div>
   <div class="menu-bottom">

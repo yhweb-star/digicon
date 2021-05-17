@@ -1,0 +1,15 @@
+<div class='contact-title'><p><%= "#{@contact.created_at.year}年#{@contact.created_at.month}月#{@contact.created_at.day}日の連絡内容" %></p></div>
+
+<div class='contact-index'>
+  <div class='contact-at'><p>発信日時  <%= @contact.created_at %></p></div>
+  <div class='contact-subject'><p><%= @contact.subject %></p></div>
+  <div class='contact-contents'><p><%= @contact.contents %></p></div>
+</div>
+
+<div class='bottan-menu'>
+  <div class='bottan-list bottan-index'><%= link_to '連絡内容一覧に戻る', contacts_path %></div>
+  <% if school_signed_in? %>
+    <div class='bottan-list bottan-edit'><%= link_to '連絡を編集', edit_contact_path(@contact.id), method: :get %></div>
+    <div class='bottan-list bottan-destroy'><%= link_to '連絡を削除', contact_path(@contact.id), method: :delete %></div>
+  <% end %>
+</div>
