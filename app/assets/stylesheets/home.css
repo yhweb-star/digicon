@@ -38,6 +38,32 @@ a{
   text-align: center;
 }
 
+/* registration */
+.field{
+  margin-bottom: 15px;
+}
+
+.input{
+  padding: 5px 0px;
+}
+
+.input-label{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.facility{
+  padding-right: 10px;
+}
+
+.mail{
+  width: 400px;
+}
+
+.actions{
+  margin-top: 30px;
+}
+
 /* home */
 .menu-top,
 .menu-bottom{

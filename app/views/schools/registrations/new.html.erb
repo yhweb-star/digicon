@@ -1,5 +1,10 @@
 <header class="header">
-  <h1 class="left-header"><a href="/">DigiCon（管理者）</a></h1>
+  <div class="left-header">
+    <div class="header-title">
+      <div class="title-text">DigiCon〜デジコン〜</div>
+      <div class="title-subtext">（管理者）</div>
+    </div>
+  </div>
 </header>
 
 <h2>新規登録（施設用）</h2>
@@ -8,33 +13,33 @@
   <%= render "schools/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :facility,"施設名" %><br />
-    <%= f.text_field :facility, autofocus: true %>
+    <%= f.label :facility,"施設名" , class:"input-label" %><br />
+    <%= f.text_field :facility, autofocus: true , class:"input facility" %>
   </div>
 
   <div class="field">
-    <%= f.label :ceo, "責任者" %> (フルネーム)<br />
-    <%= f.text_field :ceo %>
+    <%= f.label :ceo, "責任者" , class:"input-label" %> (フルネーム)<br />
+    <%= f.text_field :ceo , class:"input" %>
   </div>
 
   <div class="field">
-    <%= f.label :phone, "電話番号" %>  ※半角・ハイフンなし<br />
-    <%= f.text_field :phone %>
+    <%= f.label :phone, "電話番号" , class:"input-label" %>  ※半角・ハイフンなし<br />
+    <%= f.text_field :phone , class:"input" %>
   </div>
 
   <div class="field">
-    <%= f.label :email, "メールアドレス" %>  ※半角<br />
-    <%= f.email_field :email %>
+    <%= f.label :email, "メールアドレス" , class:"input-label" %>  ※半角<br />
+    <%= f.email_field :email , class:"input mail" %>
   </div>
 
   <div class="field">
-    <%= f.label :password, "パスワード" %>  ※半角英数混合6文字以上<br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.label :password, "パスワード" , class:"input-label" %>  ※半角英数混合6文字以上<br />
+    <%= f.password_field :password, autocomplete: "off" , class:"input" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "パスワード（再）" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.label :password_confirmation, "パスワード（再）" , class:"input-label" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" , class:"input" %>
   </div>
 
   <div class="actions">

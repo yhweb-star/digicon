@@ -1,14 +1,22 @@
+<header class="header">
+  <div class="left-header">
+    <div class="header-title">
+      <div class="title-text">DigiCon〜デジコン〜</div>
+    </div>
+  </div>
+</header>
+
 <h2>ログイン</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :email, "メールアドレス" %>  ※半角<br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, "メールアドレス" , class:"input-label" %>  ※半角<br />
+    <%= f.email_field :email , class:"input mail" %>
   </div>
 
   <div class="field">
-    <%= f.label :password, "パスワード" %>  ※半角英数混合6文字以上<br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.label :password, "パスワード" , class:"input-label" %>  ※半角英数混合6文字以上<br />
+    <%= f.password_field :password, autocomplete: "off" , class:"input" %>
   </div>
 
   <div class="actions">
