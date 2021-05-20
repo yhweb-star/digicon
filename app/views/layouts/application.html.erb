@@ -11,22 +11,31 @@
   </head>
 
   <body>
-      <% if school_signed_in? %>
-    <header class="header">
-      <h1 class="left-header"><a href="/">DigiCon（管理者）</a></h1>
+    <% if school_signed_in? %>
+      <header class="header">
+        <div class="left-header">
+          <div class="header-title">
+            <div class="title-text"><a href="/">DigiCon〜デジコン〜</a></div>
+            <div class="title-subtext">（管理者）</div>
+          </div>
+        </div>
         <div class="right-header">
           <%= link_to "ログアウト", destroy_school_session_path, method: :delete %>
         </div>
-    </header>
-      <% elsif user_signed_in? %>
-    <header class="header">
-      <h1 class="left-header"><a href="/">DigiCon</a></h1>
+      </header>
+    <% elsif user_signed_in? %>
+      <header class="header">
+        <div class="left-header">
+          <div class="header-title">
+            <div class="title-text"><a href="/">DigiCon〜デジコン〜</a></div>
+          </div>
+        </div>
         <div class="right-header">
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         </div>
-    </header>
-      <% else %>
-      <% end %>
+      </header>
+    <% else %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

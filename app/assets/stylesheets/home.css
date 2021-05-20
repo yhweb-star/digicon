@@ -1,53 +1,84 @@
+/* all */
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/* header */
 .header{
-  background-color: aquamarine;
-  height: 100px;
-  padding: 0 40px;
+  background-color:#FFCCFF;
+  padding: 10px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.menu-top{
-  height: 100vh - 100px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.menu-bottom{
-  height: 100vh - 100px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.menu-button{
-  width: 100%;
-  color: black;
-  border: 2px solid black;
-  padding: 30px 50px;
-  margin: 40px 20px 20px;
+.header-title{
   text-align: center;
 }
 
-.notice{
+.title-text{
+  font-size: 30px;
+}
+
+.title-subtext{
+  font-size: 20px;
+}
+
+.right-header{
+  border: 1px solid black;
+  padding: 5px;
   background-color: white;
 }
 
-.contact{
-  background-color: lightpink;
+/* footer */
+.footer{
+  background-color:#CCFFCC;
+  padding: 10px 0px;
+  text-align: center;
 }
 
-.schedule{
-  background-color: lightgoldenrodyellow;
+/* home */
+.menu-top,
+.menu-bottom{
+  display: flex;
+  text-align: center;
 }
 
-.absence{
-  background-color: lightgray;
+.button-contact{
+  width: 50%;
+  border: 1px solid black;
+  padding: 30px 0px;
 }
 
+.button-message{
+  width: 50%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 30px 0px;
+}
 
+.button-event{
+  width: 50%;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 30px 0px;
+}
 
+.button-absence{
+  width: 50%;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 30px 0px;
+}
+
+.menu-title{
+  padding-top: 10px;
+}
+
+/* rooms/show */
 .left-message{
   text-align: left;
 }

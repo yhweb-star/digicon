@@ -1,21 +1,70 @@
 <% if school_signed_in? %>
   <div class="menu-top">
-    <div class='menu-button notice'><%= link_to '学校からのお知らせ', contacts_path %></div>
-    <div class='menu-button contact'><%= link_to 'ご家庭への連絡', rooms_path %></div>
+    <div class='button-contact'>
+      <%= link_to contacts_path do %>
+        <%= image_tag 'homecontact.jpg' , width: '50%' %>
+        <div class='menu-title'>学校からのお知らせ</div>
+      <% end %>
+    </div>
+    <div class='button-message'>
+      <%= link_to rooms_path do %>
+        <%= image_tag 'homemessage.jpg' , width: '50%' %>
+        <div class='menu-title'>ご家庭からの連絡</div>
+      <% end %>
+    </div>
   </div>
   <div class="menu-bottom">
-    <div class='menu-button schedule'><%= link_to '学校行事', events_path%></div>
-    <div class='menu-button absence'><%= link_to '欠席・遅刻・早退のご連絡', absences_path %></div>
+    <div class='button-event'>
+      <%= link_to events_path do %>
+        <%= image_tag 'homeevent.jpg' , width: '50%' %>
+        <div class='menu-title'>学校行事</div>
+      <% end %>
+    </div>
+    <div class='button-absence'>
+      <%= link_to absences_path do %>
+        <%= image_tag 'homeabsence.jpg' , width: '50%' %>
+        <div class='menu-title'>欠席・遅刻・早退のご連絡</div>
+      <% end %>
+    </div>
   </div>
 <% elsif user_signed_in? %>
   <div class="menu-top">
-    <div class='menu-button notice'><%= link_to '学校からのお知らせ', contacts_path %></div>
-    <div class='menu-button contact'><%= link_to '学校へのご連絡', rooms_path %></div>
+    <div class='button-contact'>
+      <%= link_to contacts_path do %>
+        <%= image_tag 'homecontact.jpg' , width: '50%' %>
+        <div class='menu-title'>学校からのお知らせ</div>
+      <% end %>
+    </div>
+    <div class='button-message'>
+      <%= link_to rooms_path do %>
+        <%= image_tag 'homemessage.jpg' , width: '50%' %>
+        <div class='menu-title'>学校へのご連絡</div>
+      <% end %>
+    </div>
   </div>
   <div class="menu-bottom">
-    <div class='menu-button schedule'><%= link_to '学校行事', events_path %></div>
-    <div class='menu-button absence'><%= link_to '欠席・遅刻・早退のご連絡', new_absence_path %></div>
+    <div class='button-event'>
+      <%= link_to events_path do %>
+        <%= image_tag 'homeevent.jpg' , width: '50%' %>
+        <div class='menu-title'>学校行事</div>
+      <% end %>
+    </div>
+    <div class='button-absence'>
+      <%= link_to new_absence_path do %>
+        <%= image_tag 'homeabsence.jpg' , width: '50%' %>
+        <div class='menu-title'>欠席・遅刻・早退のご連絡</div>
+      <% end %>
+    </div>
   </div>
 <% else %>
   <h3>関係者以外の方はご利用いただけません。</h3>
+<% end %>
+
+<% if school_signed_in? || user_signed_in? %>
+  <footer class="footer">
+    <div>DigiCon（デジコン）は</div>
+    <div>お子様に関する情報をいつでも・どこでも共有できる</div>
+    <div>学校と家庭をつなぐコミュニケーションアプリです</div>
+  </footer>
+<% else %>
 <% end %>
