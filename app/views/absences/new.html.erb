@@ -5,10 +5,34 @@
 <%= render 'shared/error_messages', model: f.object %>
 
   <div class="absence-box">
-    <div class="time">対象日 <%= f.date_select :date_when %></div>
-    <div class="title">内容 <%= f.collection_select(:reason_id, Reason.all, :id, :name, {}) %></div>
-    <div class="time">登校または下校時刻 <%= f.time_select :time_when %>　　※「遅刻」「早退」の場合のみ</div>
-    <div class="content">理由 <%= f.text_field :status %></div>
-    <div class="submit"><%= f.submit "連絡する" %></div>
+    <div class="field">
+      <div class="input-label">対象日</div>
+      <%= raw sprintf(
+            f.date_select(
+              :date_when,
+              use_month_numbers: true,
+              date_separator: '%s'),
+            '年 ', '月 ') + '日' %>
+    </div>
+
+
+    <div class="field">
+      <div class="input-label">内容</div>
+      <%= f.collection_select(:reason_id, Reason.all, :id, :name, {}, class:"input reason") %>
+    </div>
+
+    <div class="field">
+      <div class="input-label timewhen">登校または下校時刻</div>   ※遅刻・早退の場合のみ<br>
+      <%= f.time_select :time_when , class:"input" %>
+    </div>
+
+    <div class="field">
+      <div class="input-label">理由</div>
+      <%= f.text_field :status , class:"input" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "連絡する" %>
+    </div>
   </div>
 <% end %>
