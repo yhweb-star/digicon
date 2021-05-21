@@ -118,6 +118,69 @@ a{
   padding-top: 10px;
 }
 
+/* index共通 */
+.new-addition{
+  width: 150px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+/* new/edit共通 */
+.bottan-list{
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottan-index{
+  width: 150px;
+  background-color: #CCFFFF;
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.bottan-edit{
+  width: 150px;
+  background-color: #CCFFCC;
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.bottan-destroy{
+  width: 150px;
+  background-color: #FFFFCC;
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+/* contacts/index */
+.contact-list{
+  border: 1px solid black;
+  margin-bottom: 1px;
+  padding: 5px;
+}
+
+.contact-subject{
+  font-size: 25px;
+}
+
+/* contacts/new */
+.input-subject{
+  width:90%;
+  padding: 5px 0px;
+}
+
+.input-contents{
+  width:90%;
+}
+
 /* rooms/show */
 .left-message{
   text-align: left;

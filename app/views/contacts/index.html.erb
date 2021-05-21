@@ -3,10 +3,10 @@
 <% end %>
 
 <% @contacts.each do |contact| %>
-  <div class='contacts'>
+  <div class='contact-list'>
   <%= link_to contact_path(contact.id) do %>
-    <div class='contact-date'><%= contact.created_at %></div>
-    <div class='contact-subjevt'><%= contact.subject %></div>
+    <div class='contact-date'><%= contact.created_at.year %>年<%= contact.created_at.month %>月<%= contact.created_at.day %>日</div>
+    <div class='contact-subject'><%= contact.subject %></div>
   <% end %>
   </div>
 <% end %>

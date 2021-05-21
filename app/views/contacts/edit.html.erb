@@ -2,20 +2,22 @@
 
 <%= form_with(model: @contact, local: true) do |form| %>
 
-  <div class="title">
-    <%= form.label :subject,"件名" %>
-    <div class='form-title'><%= form.text_field :subject %></div>
+  <div class="field">
+    <%= form.label :subject,"件名" , class:"input-label" %><br>
+    <%= form.text_field :subject , class:"input-subject"%>
   </div>
 
-  <div class="content">
-    <%= form.label :contents,"内容" %>
-    <div class='form-contents'><%= form.text_field :contents %></div>
+  <div class="field">
+    <%= form.label :contents,"内容" , class:"input-label" %><br>
+    <%= form.text_area :contents , rows: 15 , class:"input-contents"%>
   </div>
 
-  <div class="submit">
+  <div class="actions">
     <%= form.submit "連絡内容を修正" %>
   </div>
 
 <% end %>
 
-<div class='bottan-list bottan-index'><%= link_to '連絡内容一覧に戻る', contacts_path %></div>
+<div class='bottan-list'>
+  <div class='bottan-index'><%= link_to '連絡内容一覧に戻る', contacts_path %></div>
+</div>

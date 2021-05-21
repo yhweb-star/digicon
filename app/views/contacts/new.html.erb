@@ -1,23 +1,25 @@
-<div class='contact-title'><h3>連絡内容を登録</h3></div>
+<div class='contact-title'><h3>連絡内容を追加</h3></div>
 
 <%= form_with(model: @contact, local: true) do |form| %>
 
 <%= render 'shared/error_messages', model: form.object %>
 
-  <div class="title">
-    <%= form.label :subject,"件名" %>
-    <%= form.text_field :subject %>
+  <div class="field">
+    <%= form.label :subject,"件名" , class:"input-label" %><br>
+    <%= form.text_field :subject , class:"input-subject"%>
   </div>
 
-  <div class="content">
-    <%= form.label :contents,"内容" %>
-    <%= form.text_field :contents %>
+  <div class="field">
+    <%= form.label :contents,"内容" , class:"input-label" %><br>
+    <%= form.text_area :contents , rows: 15 , class:"input-contents"%>
   </div>
 
-  <div class="submit">
+  <div class="actions">
     <%= form.submit "連絡内容を追加" %>
   </div>
 
 <% end %>
 
-<div class='bottan-list bottan-index'><%= link_to '連絡内容一覧に戻る', contacts_path %></div>
+<div class='bottan-list'>
+  <div class='bottan-index'><%= link_to '連絡内容一覧に戻る', contacts_path %></div>
+</div>
