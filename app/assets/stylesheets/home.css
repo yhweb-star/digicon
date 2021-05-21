@@ -74,6 +74,10 @@ a{
   display: inline;
 }
 
+.status{
+  width: 250px;
+}
+
 /* home */
 .menu-top,
 .menu-bottom{
@@ -121,4 +125,48 @@ a{
 
 .right-message{
   text-align: right;
+}
+
+/* absence/index */
+.absence-list{
+  margin-bottom: 1px;
+  display: flex;
+}
+
+.absence-when{
+  border: 1px solid black;
+  padding: 5px 10px;
+  width: 21%;
+}
+
+.absence-name{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 5px 10px;
+  width: 19%;
+}
+
+.absence-item{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 5px 10px;
+  width: 6%;
+}
+
+.absence-time{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 5px 10px;
+  width: 20%;
+}
+
+.absence-status{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 5px 10px;
+  width: 28%;
 }

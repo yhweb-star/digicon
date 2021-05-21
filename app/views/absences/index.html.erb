@@ -4,14 +4,22 @@
   <%= link_to "連絡する", new_absence_path, class:"post" %>
 <% end %>
 
+<div class="absence-list">
+  <div class="absence-when">日付</div>
+  <div class="absence-name">氏名</div>
+  <div class="absence-item">学年</div>
+  <div class="absence-item">状況</div>
+  <div class="absence-time">遅刻・早退時間</div>
+  <div class="absence-status">理由</div>
+</div>
+
 <% @absences.each do |absence| %>
   <div class="absence-list">
-    <%= absence.user.last_name %>
-    <%= absence.user.first_name %>
-    <%= absence.user.grade %>年<br>
-    <%= absence.date_when.year %>年<%= absence.date_when.month %>月<%= absence.date_when.day %>日
-    <%= absence.time_when.hour %>時<%= absence.time_when.min %>分<br>
-    <%= absence.reason.name %>
-    <%= absence.status %>
+    <div class="absence-when"><%= absence.date_when.year %>年<%= absence.date_when.month %>月<%= absence.date_when.day %>日</div>
+    <div class="absence-name"><%= absence.user.last_name %> <%= absence.user.first_name %></div>
+    <div class="absence-item"><%= absence.user.grade %>年</div>
+    <div class="absence-item"><%= absence.reason.name %></div>
+    <div class="absence-time"><%= absence.time_when.hour %>時<%= absence.time_when.min %>分</div>
+    <div class="absence-status"><%= absence.status %></div>
   </div>
 <% end %>
