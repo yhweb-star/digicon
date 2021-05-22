@@ -2,35 +2,50 @@
 
 <%= form_with(model: @event, local: true) do |form| %>
 
-  <div class="title">
-    <%= form.label :subject,"件名" %>
-    <%= form.text_field :subject %>
+  <div class="field">
+    <%= form.label :subject,"件名" , class:"input-label" %>
+    <%= form.text_field :subject , class:"input-subject" %>
   </div>
 
-    <div class="time">
-    <%= form.label :start_time,"開始日時" %>
-    <%= form.datetime_select :start_time %>
+  <div class="field">
+    <%= form.label :start_time,"開始日時" , class:"input-label" %><br>
+    <%= raw sprintf(
+          form.datetime_select(
+              :start_time,
+              use_month_numbers: true,
+              date_separator: '%s',
+              datetime_separator: '%s'),
+            '年 ', '月 ' , '日') %>
   </div>
 
-    <div class="time">
-    <%= form.label :ending_time,"終了日時" %>
-    <%= form.datetime_select :ending_time %>
+  <div class="field">
+    <%= form.label :ending_time,"終了日時" , class:"input-label" %><br>
+    <%= raw sprintf(
+          form.datetime_select(
+              :ending_time,
+              use_month_numbers: true,
+              date_separator: '%s',
+              datetime_separator: '%s'),
+            '年 ', '月 ' , '日') %>
   </div>
 
-  <div class="content">
-    <%= form.label :place,"場所" %>
-    <%= form.text_field :place %>
+  <div class="field">
+    <%= form.label :place,"場所" , class:"input-label" %><br>
+    <%= form.text_field :place , class:"input-subject" %>
   </div>
 
-  <div class="content">
-    <%= form.label :details,"詳細" %>
-    <%= form.text_field :details %>
+  <div class="field">
+    <%= form.label :details,"詳細" , class:"input-label" %><br>
+    <%= form.text_area :details , rows: 10 , class:"input-contents"%>
   </div>
 
-  <div class="submit">
+
+  <div class="actions">
     <%= form.submit "予定を修正" %>
   </div>
 
 <% end %>
 
-<div class='bottan-list bottan-index'><%= link_to '学校行事一覧に戻る', events_path %></div>
+<div class='bottan-list'>
+  <div class='bottan-index'><%= link_to '学校行事一覧に戻る', events_path %></div>
+</div>
