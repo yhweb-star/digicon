@@ -3,7 +3,7 @@
 ## 教育機関や保育施設と保護者との情報共有のためのアプリケーション
 ## 電話や書類などアナログではなく、アプリ（digital・デジタル）で連絡（contact・コンタクト）し合える
 
-https://gyazo.com/98c04983897920bcd3ba9dd1f643c2c9
+<img width="712" alt="トップページ" src="https://user-images.githubusercontent.com/78843027/119306244-dc343700-bca4-11eb-92ad-8a32effa91cc.png">
 
 # 概要
 
@@ -18,16 +18,19 @@ https://gyazo.com/98c04983897920bcd3ba9dd1f643c2c9
 # 利用方法
 ・専用ページより新規登録・ログイン
 ・メニュー一覧ページへ遷移する
-
+## 施設側
+https://user-images.githubusercontent.com/78843027/119306298-e8b88f80-bca4-11eb-82c4-e05163b70878.mp4
+## 家庭側
+https://user-images.githubusercontent.com/78843027/119306494-3503cf80-bca5-11eb-9db3-84ae2c42f3b0.mp4
 
 ・施設から家庭への一斉連絡は左上「学校からの連絡」をクリック
 ・学校からの連絡内容一覧ページへ遷移する
 ・連絡内容をクリックすると連絡内容詳細ページへ遷移する
 ・施設側のみ内容の新規投稿・編集・削除が可能
 ## 施設側
-一連の動画
+https://user-images.githubusercontent.com/78843027/119306331-f3732480-bca4-11eb-83c9-8593a5cd2c57.mp4
 ## 家庭側
-一連の動画
+https://user-images.githubusercontent.com/78843027/119306513-3af9b080-bca5-11eb-941a-76d4a294b870.mp4
 
 ・施設と家庭との個別連絡は右上「ご家庭からの連絡」をクリック
 ・施設側のユーザーの場合、在籍する児童の一覧ページへ、
@@ -35,30 +38,30 @@ https://gyazo.com/98c04983897920bcd3ba9dd1f643c2c9
 ・連絡履歴のある場合には「チャットへ」、無い場合には「チャットルームを作成」ボタンが表示される
 ・上記ボタンをクリックするとチャットページへ遷移する
 ## 施設側
-一連の動画
+https://user-images.githubusercontent.com/78843027/119306406-0f76c600-bca5-11eb-86e3-aa7d00241a4b.mp4
 ## 家庭側
-一連の動画
+https://user-images.githubusercontent.com/78843027/119306527-40ef9180-bca5-11eb-89da-4fe7099d26a7.mp4
 
 ・学校行事の連絡・確認は左下「学校行事」をクリック
 ・予定されている学校行事一覧ページへ遷移する
 ・学校行事をクリックすると学校行事詳細ページへ遷移する
 ・施設側のみ内容の新規投稿・編集・削除が可能
 ## 施設側
-一連の動画
+https://user-images.githubusercontent.com/78843027/119306454-23bac300-bca5-11eb-8bd7-0f7a1f29df48.mp4
 ## 家庭側
-一連の動画
+https://user-images.githubusercontent.com/78843027/119306532-44831880-bca5-11eb-995a-dd2467f34385.mp4
 
 ・欠席・遅刻・早退の連絡は右下「欠席・遅刻・早退のご連絡」をクリック
 ・施設側のユーザーの場合、連絡があった児童一覧ページへ遷移する
 ・家庭側のユーザーの場合、新規投稿ページへ遷移する
 ## 施設側
-一連の動画
+https://user-images.githubusercontent.com/78843027/119306476-2d442b00-bca5-11eb-84f5-dc5d36fc1c2d.mp4
 ## 家庭側
-一連の動画
+https://user-images.githubusercontent.com/78843027/119306546-48169f80-bca5-11eb-8319-915121c4f200.mp4
 
 ・情報漏洩防止による安全対策の点から、ログインユーザー以外が利用しようとした場合、
   どのページにも遷移できない画面が表示されるよう全てのページに設定
-
+https://user-images.githubusercontent.com/78843027/119306552-4b119000-bca5-11eb-97e9-da9aa82eff16.mp4
 
 # 課題解決
 
