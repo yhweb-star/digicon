@@ -5,13 +5,13 @@
       <% if m.is_user %>
         <div class="right-message">
           <div>家庭から</div>
-          <div><%= m.updated_at %></div>
+          <div><%= m.updated_at.year %>/<%= m.updated_at.month %>/<%= m.updated_at.day %> <%= m.updated_at.strftime("%H:%M") %></div>
           <div><%= m.text %></div>
         </div>
       <% else %>
         <div class="left-message">
           <div>施設から</div>
-          <div><%= m.updated_at %></div>
+          <div><%= m.updated_at.year %>/<%= m.updated_at.month %>/<%= m.updated_at.day %> <%= m.updated_at.strftime("%H:%M") %></div>
           <div><%= m.text %></div>
         </div>
       <% end %>
@@ -24,13 +24,13 @@
       <% if m.is_user %>
         <div class="left-message">
           <div>ご家庭から</div>
-          <div><%= m.updated_at %></div>
+          <div><%= m.updated_at.year %>/<%= m.updated_at.month %>/<%= m.updated_at.day %> <%= m.updated_at.strftime("%H:%M") %></div>
           <div><%= m.text %></div>
         </div>
       <% else %>
         <div class="right-message">
           <div>施設から</div>
-          <div><%= m.updated_at %></div>
+          <div><%= m.updated_at.year %>/<%= m.updated_at.month %>/<%= m.updated_at.day %> <%= m.updated_at.strftime("%H:%M") %></div>
           <div><%= m.text %></div>
         </div>
       <% end %>

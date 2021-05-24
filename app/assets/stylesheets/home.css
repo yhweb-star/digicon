@@ -181,6 +181,16 @@ a{
   width:90%;
 }
 
+/* rooms/index */
+.room-list{
+  margin-bottom: 20px;
+}
+
+.bottan-message{
+  border: 1px solid black;
+  padding: 3px 10px;
+}
+
 /* rooms/show */
 .left-message{
   text-align: left;

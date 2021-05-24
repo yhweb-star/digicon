@@ -6,7 +6,7 @@
       <%= school.facility %>
       <% if @school_ids.include?(school.id) %>
         <br>
-        <%= link_to "チャットへ", room_path(current_user.rooms.find_by(school_id: school.id)) %><br>
+        <%= link_to "チャットへ", room_path(current_user.rooms.find_by(school_id: school.id)) ,class: "bottan-message" %><br>
       <% else %>
         <%= form_for Room.new do |f| %>
           <%= f.hidden_field :school_id, :value => school.id %>
@@ -20,11 +20,12 @@
   <div class='contact-title'><h3>ご家庭との連絡</h3></div>
   <br>
   <% @users.each do |user| %>
+  <div class='room-list'>
     <% if user.facility == current_school.facility %>
       <%= user.grade %>年 <%= user.last_name %> <%= user.first_name %>
       <% if @user_ids.include?(user.id) %>
         <br>
-        <%= link_to "チャットへ", room_path(current_school.rooms.find_by(user_id: user.id)) %><br>
+        <%= link_to "チャットへ", room_path(current_school.rooms.find_by(user_id: user.id)) ,class: "bottan-message" %><br>
       <% else %>
         <%= form_for Room.new do |f| %>
           <%= f.hidden_field :user_id, :value => user.id %>
@@ -33,6 +34,7 @@
       <% end %>
     <% else %>
     <% end %>
+  </div>
   <% end %>
 <% else %>
   <h3>関係者以外の方はご利用いただけません。</h3>
