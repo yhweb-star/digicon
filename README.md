@@ -18,17 +18,17 @@
 # 利用方法
 `・専用ページより新規登録・ログイン`  
 `・メニュー一覧ページへ遷移する`  
+## 施設側  
 ※施設用ログインページ  
 https://digital-contact-app.herokuapp.com/schools/sign_in  
 メールアドレス aaa@aaa  
 パスワード aaa111  
+https://user-images.githubusercontent.com/78843027/119306298-e8b88f80-bca4-11eb-82c4-e05163b70878.mp4  
+## 家庭側  
 ※家庭用ログインページ  
 https://digital-contact-app.herokuapp.com/users/sign_in  
 メールアドレス bbb@bbb  
 パスワード bbb222  
-## 施設側
-https://user-images.githubusercontent.com/78843027/119306298-e8b88f80-bca4-11eb-82c4-e05163b70878.mp4
-## 家庭側
 https://user-images.githubusercontent.com/78843027/119306494-3503cf80-bca5-11eb-9db3-84ae2c42f3b0.mp4
   
 `・施設から家庭への一斉連絡は左上「学校からの連絡」をクリック`  
