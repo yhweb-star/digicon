@@ -23,7 +23,7 @@
 https://digital-contact-app.herokuapp.com/schools/sign_in  
 メールアドレス aaa@aaa  
 パスワード aaa111  
-https://user-images.githubusercontent.com/78843027/119306298-e8b88f80-bca4-11eb-82c4-e05163b70878.mp4  
+https://user-images.githubusercontent.com/78843027/119306298-e8b88f80-bca4-11eb-82c4-e05163b70878.mp4
 ## 家庭側  
 ※家庭用ログインページ  
 https://digital-contact-app.herokuapp.com/users/sign_in  
@@ -67,7 +67,7 @@ https://user-images.githubusercontent.com/78843027/119306476-2d442b00-bca5-11eb-
 https://user-images.githubusercontent.com/78843027/119306546-48169f80-bca5-11eb-8319-915121c4f200.mp4  
 
 `・情報漏洩防止による安全対策の点から、ログインユーザー以外が利用しようとした場合、どのページにも遷移できない画面が表示されるよう全てのページに設定`  
-https://user-images.githubusercontent.com/78843027/119310378-9d08e480-bcaa-11eb-9730-45709554fbba.mp4  
+https://user-images.githubusercontent.com/78843027/119310378-9d08e480-bcaa-11eb-9730-45709554fbba.mp4
 
 # 課題解決
 
