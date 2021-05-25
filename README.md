@@ -8,18 +8,22 @@
 # 概要
 ## お子様に関する情報は正確に伝えたい ＆ 把握したい。でも、忙しい時間帯は職員も保護者も同じ。
 ## アプリだから電話や連絡帳のように「忘れた」 「無くした」の心配はありません。
-## カレンダーでのスケジュール共有・連絡事項の配信・個別連絡はチャット機能を搭載。
+## カレンダーでのスケジュール共有・連絡事項の配信・個別連絡はチャット機能を搭載。  
 
 
 # App URL
-
+## https://digital-contact-app.herokuapp.com/  
 
 # 利用方法
 `・専用ページより新規登録・ログイン`  
 `・メニュー一覧ページへ遷移する`
 ## 施設側
+https://digital-contact-app.herokuapp.com/schools/sign_up
+https://digital-contact-app.herokuapp.com/schools/sign_in
 https://user-images.githubusercontent.com/78843027/119306298-e8b88f80-bca4-11eb-82c4-e05163b70878.mp4
 ## 家庭側
+https://digital-contact-app.herokuapp.com/users/sign_up
+https://digital-contact-app.herokuapp.com/users/sign_in
 https://user-images.githubusercontent.com/78843027/119306494-3503cf80-bca5-11eb-9db3-84ae2c42f3b0.mp4
   
 `・施設から家庭への一斉連絡は左上「学校からの連絡」をクリック`  
