@@ -13,14 +13,19 @@
 
 # App URL
 ## https://digital-contact-app.herokuapp.com/  
-※以下、新規登録ページよりユーザー登録の上、動作をご確認ください。
-https://digital-contact-app.herokuapp.com/schools/sign_up  
-https://digital-contact-app.herokuapp.com/users/sign_up  
 
 
 # 利用方法
 `・専用ページより新規登録・ログイン`  
-`・メニュー一覧ページへ遷移する`
+`・メニュー一覧ページへ遷移する`  
+※施設用ログインページ  
+https://digital-contact-app.herokuapp.com/schools/sign_in  
+メールアドレス aaa@aaa  
+パスワード aaa111  
+※家庭用ログインページ  
+https://digital-contact-app.herokuapp.com/users/sign_in  
+メールアドレス bbb@bbb  
+パスワード bbb222  
 ## 施設側
 https://user-images.githubusercontent.com/78843027/119306298-e8b88f80-bca4-11eb-82c4-e05163b70878.mp4
 ## 家庭側
